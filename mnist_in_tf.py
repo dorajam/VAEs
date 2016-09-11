@@ -87,7 +87,7 @@ correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_correct,1))      # ret
 # tf.cast = [True, False, True] -> [1,0,1] -> then take average
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
-# execure the eval funcs by applying them to the test data:
+# execute the eval funcs by applying them to the test data:
 print(accuracy.eval(feed_dict={x:mnist.test.images, y_correct:mnist.test.labels}))
 
 
