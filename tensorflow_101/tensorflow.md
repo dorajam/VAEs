@@ -2,5 +2,5 @@
 #### focusing on the implementation of a basic Variational AutoEncoder (VAE). 
 #### Some links I found useful:
 - https://hackerlists.com/tensorflow-resources/
-- official Tensorflow tutorials
+- official Tensorflow tutorials: MNIST for experts
 
