@@ -2,7 +2,7 @@ conv_mnist_in_tf.py
 
 '''
 Extending the basic shallow network for MNIST in Tensorflow (mnist_in_f.py), 
-now we are going to implement a convolutiona network.
+now we are going to implement a convolutional network.
 '''
 
 import tenforflow as tf
