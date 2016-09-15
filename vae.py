@@ -95,6 +95,13 @@ class VAE(object):
                                         shape=[None, self.architecture[-1]],
                                         name="latent_in")
         x_generated_ = composeAll(decoding)(z_)
+
+        # reconstruction loss: difference b/w x and x_generated
+        # binary cross_entropy - assumes x & p(x|z) are iid Bernoullis
+        rec_loss = VAE.crossEntropy(x_generated, x_in)
+
+        # mismatch b/w the extimated and true posterior distrib p(z|x)
+        kl_loss = VAE.kullbackLeibler(z_mean, z_log_sigma) 
         
 
 
